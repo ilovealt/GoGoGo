@@ -1,0 +1,14 @@
+{
+  "editor.fontSize": 20,
+  "editor.formatOnSave": true,
+  "go.useLanguageServer": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
+  "files.readonlyFromPermissions": true,
+  "files.readonlyInclude": {
+    "/opt/homebrew/Cellar/go/**/*.go": true
+  }
+}

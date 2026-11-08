@@ -1,0 +1,34 @@
+server:
+  addr: ":8080"
+
+jwt:
+  # 生产环境请通过 JWT_SECRET 环境变量注入，不要提交真实密钥
+  secret: ""
+  access_ttl: "15m"
+  refresh_ttl: "168h"
+
+log:
+  level: "info"
+
+# 数据库密码通过 DB_PASSWORD 环境变量注入，不要写在这里。
+database:
+  host: "localhost"
+  port: 5432
+  name: "gogogo"
+  user: "postgres"
+  sslmode: "disable"
+  max_open_conns: 50
+  max_idle_conns: 10
+  conn_max_lifetime: "1h"
+  conn_max_idle_time: "10m"
+  # 启动时预建当前月及未来 N 个月的 point_samples 分区
+  partition_months_ahead: 2
+
+demo:
+  seed: true
+  collector: true
+  interval: "5s"
+
+cors:
+  origins:
+    - "*"
